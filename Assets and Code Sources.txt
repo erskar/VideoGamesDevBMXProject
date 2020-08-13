@@ -1,0 +1,8 @@
+Code for lane switching sourced from:
+
+https://www.youtube.com/watch?v=MwvmNyYKgwA&list=PL0WgRP7BtOez8O7UAQiW0qAp-XfKZXA9W&index=3
+
+Skybox textures sourced from:
+
+https://assetstore.unity.com/packages/2d/textures-materials/sky/allsky-free-10-sky-skybox-set-146014
+
