@@ -2,6 +2,12 @@ Code for lane switching sourced from here:
 
 https://www.youtube.com/watch?v=MwvmNyYKgwA&list=PL0WgRP7BtOez8O7UAQiW0qAp-XfKZXA9W&index=3
 
+Code for tile prefabs and infinite generation of tiles sourced from here:
+
+https://www.youtube.com/watch?v=rArpoKcGUmA&list=PL0WgRP7BtOez8O7UAQiW0qAp-XfKZXA9W&index=7&ab_channel=Developer3.5Pro
+
+https://www.youtube.com/watch?v=6Y0U8GHiuBA&list=PL0WgRP7BtOez8O7UAQiW0qAp-XfKZXA9W&index=8&ab_channel=Developer3.5Pro
+
 Skybox textures sourced from here:
 
 https://assetstore.unity.com/packages/2d/textures-materials/sky/allsky-free-10-sky-skybox-set-146014

@@ -8,5 +8,6 @@ public class MainMenuButton : MonoBehaviour
     public void QuitToMainMenu()
     {
         SceneManager.LoadScene("MainMenu");
+        PauseMenu.paused = false;
     }
 }
