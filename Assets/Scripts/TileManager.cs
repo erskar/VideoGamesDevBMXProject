@@ -21,9 +21,14 @@ public class TileManager : MonoBehaviour
         for (int i = 0; i < numberOfTiles; i++)
         {
             if (i == 0)
+            {
                 SpawnTile(0);
+                SpawnTile(Random.Range(1, tilePrefabs.Length));
+            }
             else
+            {
                 SpawnTile(Random.Range(1, tilePrefabs.Length)); //works but need to fix Tile0 prefab so currently Tile0 isn't in the list of tilePrefabs
+            }
         }
     }
 
@@ -43,6 +48,7 @@ public class TileManager : MonoBehaviour
 
                 SpawnTile(Random.Range(1, tilePrefabs.Length));
             }
+            DeleteTile();
             DeleteTile();
         }
     }
