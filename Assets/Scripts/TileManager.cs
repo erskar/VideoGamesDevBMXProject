@@ -23,7 +23,7 @@ public class TileManager : MonoBehaviour
             if (i == 0)
                 SpawnTile(0);
             else
-                SpawnTile(Random.Range(0, tilePrefabs.Length)); //works but need to fix Tile0 prefab so currently Tile0 isn't in the list of tilePrefabs
+                SpawnTile(Random.Range(1, tilePrefabs.Length)); //works but need to fix Tile0 prefab so currently Tile0 isn't in the list of tilePrefabs
         }
     }
 
@@ -33,8 +33,16 @@ public class TileManager : MonoBehaviour
         //spawns new tiles
         if (playerTransform.position.z - 30 > zSpawn - (numberOfTiles * tileLength))
         {
-            //deletes old tiles
-            SpawnTile(Random.Range(0, tilePrefabs.Length));
+            for (int i = 0; i < numberOfTiles; i++)
+            {
+                if (i == 3)
+                    SpawnTile(0);
+          
+
+                else
+
+                SpawnTile(Random.Range(1, tilePrefabs.Length));
+            }
             DeleteTile();
         }
     }
