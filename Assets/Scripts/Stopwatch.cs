@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -34,6 +35,12 @@ public class Stopwatch : MonoBehaviour
 
     [SerializeField]
     private float storedDistance;
+
+    [SerializeField]
+    private float timeLimitSeconds;
+
+    [SerializeField]
+    private float distanceSeconds;
 
     [SerializeField]
     private bool initialPB;
@@ -92,6 +99,7 @@ public class Stopwatch : MonoBehaviour
         if (timeLimit > 0)
         {
             timeLimit -= Time.deltaTime;
+            timeLimitSeconds = timeLimit % 60;
             UpdateTimeLimitUI();
             Debug.Log(timeLimit);
         }
@@ -99,6 +107,7 @@ public class Stopwatch : MonoBehaviour
         if (Input.GetKey(KeyCode.UpArrow) && timeLimit > 0)
         {
             distance += Time.deltaTime;
+            distanceSeconds = distance % 60;
             UpdateDistanceUI();
         }
 
@@ -132,7 +141,7 @@ public class Stopwatch : MonoBehaviour
     {
         if (trialModeTimeLimitCount != null)
         {
-            trialModeTimeLimitCount.text = timeLimit.ToString();
+            trialModeTimeLimitCount.text = string.Format("{0:00}", timeLimitSeconds);
         }
     }
 
@@ -140,7 +149,7 @@ public class Stopwatch : MonoBehaviour
     {
         if (trialModeDistanceCount != null)
         {
-            trialModeDistanceCount.text = distance.ToString();
+            trialModeDistanceCount.text = string.Format("{0:00} Metres", distanceSeconds);
         }
     }
 }

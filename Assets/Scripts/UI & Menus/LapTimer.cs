@@ -18,6 +18,12 @@ public class LapTimer : MonoBehaviour
     private float storedTime;
 
     [SerializeField]
+    private float seconds;
+
+    [SerializeField]
+    private float minutes;
+
+    [SerializeField]
     private bool initialPB;
 
     GameObject player;
@@ -37,6 +43,8 @@ public class LapTimer : MonoBehaviour
         if (PauseMenu.paused == false && RestartButton.playerDied == false)
         {
             timer += Time.deltaTime;
+            seconds = timer % 60;
+            minutes = timer / 60;
             UpdateTimerUI();
         }
     }
@@ -64,7 +72,7 @@ public class LapTimer : MonoBehaviour
     {
         if (timerText != null)
         {
-            timerText.text = timer.ToString();
+            timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
         }
     }
 }

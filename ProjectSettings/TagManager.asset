@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Obstacle
   - Stopwatch
+  - AI
   layers:
   - Default
   - TransparentFX

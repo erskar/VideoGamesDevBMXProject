@@ -6,7 +6,12 @@ ModelImporter:
   - first:
       74: -3456602156653232860
     second: pCylinder7|pCylinder7Action
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert3
+    second: {fileID: 2100000, guid: 8dea29650b278854c9b9f2a3577f21f5, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -39,14 +44,14 @@ ModelImporter:
       takeName: pCylinder7|pCylinder7Action
       internalID: 0
       firstFrame: 0
-      lastFrame: 51
+      lastFrame: 69
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
